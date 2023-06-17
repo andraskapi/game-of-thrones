@@ -1,17 +1,26 @@
+import java.util.HashSet;
+import java.util.Set;
+
 public class Noble extends Character{
-    private House house;
+    private final Set<House> houses = new HashSet<>();
     private int wealth;
 
-    public Noble(String name, String birthPlace, Gender gender, House house, int wealth) {
+    public Noble(String name, String birthPlace, Gender gender) {
         super(name, birthPlace, gender);
-        this.house = house;
-        this.wealth = wealth;
     }
+    public void addHouse (House house){
+        houses.add(house);
+    }
+    public void removeHouse(House house){
+        houses.remove(house);
+    }
+
+
 
     @Override
     public String toString() {
         return getName() + " of " +
-                "house " + house +
+                "house " + houses +
                 " has " + wealth +
                 "gold dragons";
     }
