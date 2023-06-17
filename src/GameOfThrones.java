@@ -5,6 +5,9 @@ public class GameOfThrones {
         joko.setGender(Gender.EUNUCH);
         System.out.println(joko);
         Noble ceres = new Noble("Ceres","Lapátfalva",Gender.FEMALE);
+        ceres.addHouse(House.GREYJOY);
+        ceres.addHouse(House.LANNISTER);
+        System.out.println(ceres);
 
 
 

@@ -93,7 +93,7 @@ Ha ezzel megvagy, szemet szúrhat, hogy a toString() metódus, most ebben a form
 a nemes emberünket: `Cersei of house(s) [BARATHEON, LANNISTER] has 500000 gold dragons`.
 Módosítsd, hogy a kapcsos zárójelek lekerüljenek a kiírásból! 
 
-<details><summary>Megoldás</summary><p>
+<details><summary>Megoldás</summary><p>  #&##&#&#&# ITT TARTOK !!!!!!4
 Ehhez több jó megoldás létezik,
 érdemes külön felvenni egy <code>getHousesAsString()</code> metódust, ami visszaadja egy String-be összefűzve a
 házakat!

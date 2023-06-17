@@ -32,12 +32,5 @@ public class Character  {
 
     }
 
-    @Override
-    public String toString() {
-        return "Character{" +
-                "name='" + name + '\'' +
-                ", birthPlace='" + birthPlace + '\'' +
-                ", gender=" + gender +
-                '}';
-    }
+
 }

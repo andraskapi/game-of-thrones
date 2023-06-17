@@ -17,11 +17,13 @@ public class Noble extends Character{
 
 
 
+
+
     @Override
     public String toString() {
         return getName() + " of " +
                 "house " + houses +
                 " has " + wealth +
-                "gold dragons";
+                " gold dragons";
     }
 }
