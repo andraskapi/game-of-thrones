@@ -1,12 +1,15 @@
-public class Character  {
+public class Character implements Mortal {
     private String name;
     private final String birthPlace;
     private Gender gender;
+    private static int populationCounter;
+    private static int deathCounter;
 
     public Character(String name, String birthPlace, Gender gender) {
         this.name = name;
         this.birthPlace = birthPlace;
         this.gender = gender;
+        populationCounter++;
     }
 
     public String getName() {
@@ -31,6 +34,12 @@ public class Character  {
         }
 
     }
+    public static void getWorldPopulation(){
+        System.out.println("The population is " + populationCounter);
+    }
 
+      @Override
+    public void die(Character character) {
 
+    }
 }

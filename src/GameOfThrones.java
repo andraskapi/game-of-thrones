@@ -8,6 +8,8 @@ public class GameOfThrones {
         ceres.addHouse(House.GREYJOY);
         ceres.addHouse(House.LANNISTER);
         System.out.println(ceres);
+        Character.getWorldPopulation();
+
 
 
 
