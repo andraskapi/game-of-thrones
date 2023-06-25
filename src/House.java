@@ -24,4 +24,7 @@ public enum House {
     public String getInHungarian() {
         return inHungarian;
     }
+    public String getSigil(){
+        return sigil;
+    }
 }

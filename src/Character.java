@@ -3,7 +3,7 @@ public class Character implements Mortal {
     private final String birthPlace;
     private Gender gender;
     private static int populationCounter;
-    private static int deathCounter;
+
 
     public Character(String name, String birthPlace, Gender gender) {
         this.name = name;
@@ -39,7 +39,10 @@ public class Character implements Mortal {
     }
 
       @Override
-    public void die(Character character) {
+    public void die() {
+        populationCounter--;
+
+
 
     }
 }

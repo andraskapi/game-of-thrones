@@ -3,19 +3,32 @@ import java.util.Set;
 
 public class Noble extends Character{
     private final Set<House> houses = new HashSet<>();
+
     private int wealth;
+
 
     public Noble(String name, String birthPlace, Gender gender, int wealth) {
         super(name, birthPlace, gender);
         this.wealth = wealth;
+
     }
+
     public void addHouse (House house){
         houses.add(house);
     }
     public void removeHouse(House house){
         houses.remove(house);
     }
-   public String getHousesAsString(Set<House> houses){
+
+    public Set<House> getHouses() {
+        return houses;
+    }
+
+    public int getWealth() {
+        return wealth;
+    }
+
+    public String getHousesAsString(Set<House> houses){
       String houseAsString = "";
 
        for (House house : houses
@@ -23,6 +36,14 @@ public class Noble extends Character{
 
        }return houseAsString;
    }
+    public void die(){
+        if (getHouses().size() > 0){
+            System.out.println();
+        }
+
+
+    }
+
 
 
 
