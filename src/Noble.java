@@ -5,8 +5,9 @@ public class Noble extends Character{
     private final Set<House> houses = new HashSet<>();
     private int wealth;
 
-    public Noble(String name, String birthPlace, Gender gender) {
+    public Noble(String name, String birthPlace, Gender gender, int wealth) {
         super(name, birthPlace, gender);
+        this.wealth = wealth;
     }
     public void addHouse (House house){
         houses.add(house);
@@ -14,6 +15,14 @@ public class Noble extends Character{
     public void removeHouse(House house){
         houses.remove(house);
     }
+   public String getHousesAsString(Set<House> houses){
+      String houseAsString = "";
+
+       for (House house : houses
+            ) {houseAsString += house.toString() + " ";
+
+       }return houseAsString;
+   }
 
 
 
@@ -22,7 +31,7 @@ public class Noble extends Character{
     @Override
     public String toString() {
         return getName() + " of " +
-                "house " + houses +
+                "house " + getHousesAsString(houses) +
                 " has " + wealth +
                 " gold dragons";
     }
