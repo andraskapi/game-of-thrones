@@ -1,9 +1,13 @@
 package combat;
 
+import combat.type.RangedWeaponType;
+
 public class RangedWeapon extends Weapon{
     static int ammunition;
-    public RangedWeapon(String name, int damage, int range) {
+    private RangedWeaponType type;
+    public RangedWeapon(String name, int damage, int range, RangedWeaponType type) {
         super(name, damage, range);
+        this.type = type;
 
     }
     public static void getAmmunition(){

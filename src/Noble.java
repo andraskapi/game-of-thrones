@@ -7,9 +7,10 @@ public class Noble extends Character{
     private int wealth;
 
 
-    public Noble(String name, String birthPlace, Gender gender, int wealth) {
+    public Noble(String name, String birthPlace, Gender gender, int wealth, Set<House> houses) {
         super(name, birthPlace, gender);
         this.wealth = wealth;
+
 
     }
 
@@ -23,6 +24,7 @@ public class Noble extends Character{
     public Set<House> getHouses() {
         return houses;
     }
+
 
     public int getWealth() {
         return wealth;
