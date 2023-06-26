@@ -18,6 +18,7 @@ public class GameOfThrones {
         System.out.println(latyak.getName());
         System.out.println(ceres.getHouses());
         System.out.println(House.LANNISTER.getSigil());
+        ceres.die();
 
         Character.getWorldPopulation();
 

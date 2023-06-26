@@ -38,11 +38,18 @@ public class Character implements Mortal {
         System.out.println("The population is " + populationCounter);
     }
 
-      @Override
-    public void die() {
+
+    @Override
+    public void die() {  //majd újra megnézni
+        if (this instanceof Noble noble){
+            noble.printHouseMotto();
         populationCounter--;
+
+        }
 
 
 
     }
+
+
 }

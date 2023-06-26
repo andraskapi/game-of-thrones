@@ -36,16 +36,11 @@ public class Noble extends Character{
 
        }return houseAsString;
    }
-    public void die(){
-        if (getHouses().size() > 0){
-            System.out.println();
+    public void printHouseMotto() {
+        for (House house : houses) {
+            System.out.println(house.getInEngilsh());
         }
-
-
     }
-
-
-
 
 
 
