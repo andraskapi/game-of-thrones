@@ -1,8 +1,13 @@
+import combat.Weapon;
+
+import java.util.Set;
+
 public class Character implements Mortal {
     private String name;
     private final String birthPlace;
     private Gender gender;
     private static int populationCounter;
+    private Set<Weapon> weapons; // ezt megírni
 
 
     public Character(String name, String birthPlace, Gender gender) {
@@ -46,10 +51,14 @@ public class Character implements Mortal {
         populationCounter--;
 
         }
-
-
-
     }
 
-
+    @Override
+    public String toString() {
+        return "Character{" +
+                "name='" + name + '\'' +
+                ", birthPlace='" + birthPlace + '\'' +
+                ", gender=" + gender +
+                '}';
+    }
 }

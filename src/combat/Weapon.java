@@ -11,4 +11,6 @@ public abstract class Weapon {
     }
 
     abstract void attack();
+
+
 }

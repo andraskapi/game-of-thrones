@@ -6,8 +6,8 @@ public class MeleeWeapon extends Weapon{
     private MeleeWeaponType type;
 
 
-    public MeleeWeapon(String name, int damage, int range, MeleeWeaponType type) {
-        super(name, damage, range = 1);
+    public MeleeWeapon(String name, int damage, MeleeWeaponType type) {
+        super(name, damage, 1);
         this.type = type;
     }
 
@@ -15,4 +15,5 @@ public class MeleeWeapon extends Weapon{
     void attack() {
 
     }
+
 }
