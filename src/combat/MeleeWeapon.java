@@ -16,4 +16,10 @@ public class MeleeWeapon extends Weapon{
 
     }
 
+    @Override
+    public String toString() {
+        return "MeleeWeapon{" +
+                "type=" + type +
+                '}';
+    }
 }

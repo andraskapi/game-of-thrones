@@ -10,6 +10,7 @@ public class Noble extends Character{
     public Noble(String name, String birthPlace, Gender gender, int wealth, Set<House> houses) {
         super(name, birthPlace, gender);
         this.wealth = wealth;
+        this.houses.addAll(houses);
 
 
     }
@@ -44,13 +45,11 @@ public class Noble extends Character{
         }
     }
 
-
-
     @Override
     public String toString() {
         return getName() + " of " +
                 "house " + getHousesAsString(houses) +
                 " has " + wealth +
-                " gold dragons";
+                " gold dragons" + getWeapons();
     }
 }

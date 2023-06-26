@@ -3,14 +3,15 @@ package combat;
 import combat.type.RangedWeaponType;
 
 public class RangedWeapon extends Weapon{
-    static int ammunition;
+    private int ammunition;
     private RangedWeaponType type;
-    public RangedWeapon(String name, int damage, int range, RangedWeaponType type) {
+    public RangedWeapon(String name, int damage, int range, int ammunition, RangedWeaponType type) {
         super(name, damage, range);
         this.type = type;
+        this.ammunition = ammunition;
 
     }
-    public static void getAmmunition(){
+    public void getAmmunition(){
         System.out.println(ammunition + " ammo left");
     }
 
@@ -18,5 +19,13 @@ public class RangedWeapon extends Weapon{
     void attack() {
         ammunition--;
 
+    }
+
+    @Override
+    public String toString() {
+        return "RangedWeapon{" +
+                "ammunition=" + ammunition +
+                ", type=" + type +
+                '}';
     }
 }

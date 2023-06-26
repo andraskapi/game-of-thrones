@@ -1,5 +1,6 @@
 import combat.Weapon;
 
+import java.util.HashSet;
 import java.util.Set;
 
 public class Character implements Mortal {
@@ -7,7 +8,7 @@ public class Character implements Mortal {
     private final String birthPlace;
     private Gender gender;
     private static int populationCounter;
-    private Set<Weapon> weapons; // ezt megírni
+    private Set<Weapon> weapons = new HashSet<>();
 
 
     public Character(String name, String birthPlace, Gender gender) {
@@ -15,6 +16,16 @@ public class Character implements Mortal {
         this.birthPlace = birthPlace;
         this.gender = gender;
         populationCounter++;
+    }
+    public void addWeapon (Weapon weapon){
+
+    }
+    public void removeWeapon(String weaponeName){
+
+    }
+
+    public Set<Weapon> getWeapons() {
+        return weapons;
     }
 
     public String getName() {
@@ -59,6 +70,7 @@ public class Character implements Mortal {
                 "name='" + name + '\'' +
                 ", birthPlace='" + birthPlace + '\'' +
                 ", gender=" + gender +
+                ", weapons=" + weapons +
                 '}';
     }
 }

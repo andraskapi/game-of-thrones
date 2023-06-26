@@ -12,5 +12,12 @@ public abstract class Weapon {
 
     abstract void attack();
 
-
+    @Override
+    public String toString() {
+        return "Weapon{" +
+                "name='" + name + '\'' +
+                ", damage=" + damage +
+                ", range=" + range +
+                '}';
+    }
 }
