@@ -12,12 +12,34 @@ public abstract class Weapon {
 
     abstract void attack();
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getDamage() {
+        return damage;
+    }
+
+    public void setDamage(int damage) {
+        this.damage = damage;
+    }
+
+    public int getRange() {
+        return range;
+    }
+
+    public void setRange(int range) {
+        this.range = range;
+    }
+
     @Override
     public String toString() {
-        return "Weapon{" +
-                "name='" + name + '\'' +
+        return "Weapon name=" + name +
                 ", damage=" + damage +
-                ", range=" + range +
-                '}';
+                ", range=" + range;
     }
 }

@@ -11,6 +11,14 @@ public class MeleeWeapon extends Weapon{
         this.type = type;
     }
 
+    public MeleeWeaponType getType() {
+        return type;
+    }
+
+    public void setType(MeleeWeaponType type) {
+        this.type = type;
+    }
+
     @Override
     void attack() {
 
@@ -18,8 +26,6 @@ public class MeleeWeapon extends Weapon{
 
     @Override
     public String toString() {
-        return "MeleeWeapon{" +
-                "type=" + type +
-                '}';
+        return "a " + getType() + "named " + getName() + " with " + getDamage() + " damage ";
     }
 }

@@ -20,6 +20,10 @@ public class GameOfThrones {
         arya.addWeapon(new MeleeWeapon("Valyrian steel dagger", 20, MeleeWeaponType.TOR));
         arya.addWeapon(new RangedWeapon("Stolen bow", 10, 40, 5, RangedWeaponType.IJ));
 
+
+        System.out.println(arya);
+        System.out.println(arya.getWeapons().toString());
+        arya.removeWeapon("Stolen bow");
         System.out.println(arya);
         System.out.println(arya.getWeapons());
 

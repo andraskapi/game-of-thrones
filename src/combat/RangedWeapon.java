@@ -11,9 +11,11 @@ public class RangedWeapon extends Weapon{
         this.ammunition = ammunition;
 
     }
+
     public void getAmmunition(){
         System.out.println(ammunition + " ammo left");
     }
+
 
     @Override
     void attack() {
@@ -21,11 +23,21 @@ public class RangedWeapon extends Weapon{
 
     }
 
+    public void setAmmunition(int ammunition) {
+        this.ammunition = ammunition;
+    }
+
+    public RangedWeaponType getType() {
+        return type;
+    }
+
+    public void setType(RangedWeaponType type) {
+        this.type = type;
+    }
+
     @Override
     public String toString() {
-        return "RangedWeapon{" +
-                "ammunition=" + ammunition +
-                ", type=" + type +
-                '}';
+        return "a(n) " + getType() + " named " + getName() + " with " + getDamage() + " damage \n"  +
+                 "and with range of " + getRange() + " m";
     }
 }

@@ -17,12 +17,25 @@ public class Character implements Mortal {
         this.gender = gender;
         populationCounter++;
     }
-    public void addWeapon (Weapon weapon){
+
+    public void addWeapon(Weapon weapon) {
+        weapons.add(weapon);
 
     }
-    public void removeWeapon(String weaponeName){
 
+    public void removeWeapon(String weaponeName) {
+        Weapon weaponToRemove = null;
+        for (Weapon weapon : weapons) {
+            if (weapon.getName().equals(weaponeName)) {
+                weaponToRemove = weapon;
+            }
+
+        }
+        if (weaponToRemove != null) {
+            weapons.remove(weaponToRemove);
+        }
     }
+
 
     public Set<Weapon> getWeapons() {
         return weapons;
@@ -50,16 +63,17 @@ public class Character implements Mortal {
         }
 
     }
-    public static void getWorldPopulation(){
+
+    public static void getWorldPopulation() {
         System.out.println("The population is " + populationCounter);
     }
 
 
     @Override
     public void die() {  //majd újra megnézni
-        if (this instanceof Noble noble){
+        if (this instanceof Noble noble) {
             noble.printHouseMotto();
-        populationCounter--;
+            populationCounter--;
 
         }
     }
@@ -74,3 +88,4 @@ public class Character implements Mortal {
                 '}';
     }
 }
+
