@@ -26,6 +26,6 @@ public class MeleeWeapon extends Weapon{
 
     @Override
     public String toString() {
-        return "a " + getType() + "named " + getName() + " with " + getDamage() + " damage ";
+        return "a " + getType() + " named " + getName() + " with " + getDamage() + " damage ";
     }
 }

@@ -38,6 +38,6 @@ public class RangedWeapon extends Weapon{
     @Override
     public String toString() {
         return "a(n) " + getType() + " named " + getName() + " with " + getDamage() + " damage \n"  +
-                 "and with range of " + getRange() + " m";
+                 " and with range of " + getRange() + " m";
     }
 }

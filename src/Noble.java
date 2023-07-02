@@ -1,24 +1,28 @@
+import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Map;
 import java.util.Set;
 
-public class Noble extends Character{
+public class Noble extends Character {
     private final Set<House> houses = new HashSet<>();
 
-    private int wealth;
+    private Map<String, Integer> coins = new HashMap();
 
 
-    public Noble(String name, String birthPlace, Gender gender, int wealth, Set<House> houses) {
+    public Noble(String name, String birthPlace, Gender gender, Set<House> houses) {
         super(name, birthPlace, gender);
-        this.wealth = wealth;
         this.houses.addAll(houses);
 
 
     }
 
-    public void addHouse (House house){
+    @Override
+    public void addHouse(House house) {
         houses.add(house);
     }
-    public void removeHouse(House house){
+
+    @Override
+    public void removeHouse(House house) {
         houses.remove(house);
     }
 
@@ -26,19 +30,46 @@ public class Noble extends Character{
         return houses;
     }
 
-
-    public int getWealth() {
-        return wealth;
+    @Override
+    public void addCoins(String coinType, int amount) {
+        coins.put(coinType, amount);
     }
 
-    public String getHousesAsString(Set<House> houses){
-      String houseAsString = "";
+    @Override
+    public void removeCoins(String coinType, int amount) {
+        Integer currentAmount = coins.get(coinType);
+        if (currentAmount != null) {
+            int newAmount = currentAmount - amount;
+            if (newAmount <= 0) {
+                coins.remove(coinType);
+            } else {
+                coins.replace(coinType, newAmount);
+            }
+        }
+    }
+    public void getWealth(Map<String, Integer> coin){
+        //1 gold -> 10 silver -> 100 copper
+        int gold;
+        int silver;
+        int copper;
+        if (coins.get(
+                coin.
 
-       for (House house : houses
-            ) {houseAsString += house.toString() + " ";
 
-       }return houseAsString;
-   }
+    }
+
+
+    public String getHousesAsString(Set<House> houses) {
+        String houseAsString = "";
+
+        for (House house : houses
+        ) {
+            houseAsString += house.toString() + " ";
+
+        }
+        return houseAsString;
+    }
+
     public void printHouseMotto() {
         for (House house : houses) {
             System.out.println(house.getInEngilsh());
@@ -49,7 +80,7 @@ public class Noble extends Character{
     public String toString() {
         return getName() + " of " +
                 "house " + getHousesAsString(houses) +
-                " has " + wealth +
+                " has " + coins +
                 " gold dragons" + getWeapons();
     }
 }

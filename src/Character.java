@@ -64,6 +64,24 @@ public class Character implements Mortal {
 
     }
 
+    public void addHouse(House house) {
+
+    }
+
+    public void removeHouse(House house) {
+
+    }
+
+    public void addCoins(String coinType, int amount) {
+
+    }
+
+
+    public void removeCoins(String coinType, int amount) {
+
+
+    }
+
     public static void getWorldPopulation() {
         System.out.println("The population is " + populationCounter);
     }
