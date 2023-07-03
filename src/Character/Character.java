@@ -1,3 +1,7 @@
+package Character;
+
+import Character.type.Gender;
+import Character.type.House;
 import combat.Weapon;
 
 import java.util.HashSet;
@@ -98,7 +102,7 @@ public class Character implements Mortal {
 
     @Override
     public String toString() {
-        return "Character{" +
+        return "Character.Character{" +
                 "name='" + name + '\'' +
                 ", birthPlace='" + birthPlace + '\'' +
                 ", gender=" + gender +

@@ -1,3 +1,7 @@
+import Character.type.Gender;
+import Character.type.House;
+import Character.Noble;
+import Character.Character;
 import combat.MeleeWeapon;
 import combat.RangedWeapon;
 import combat.Weapon;

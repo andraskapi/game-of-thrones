@@ -1,3 +1,8 @@
+package Character;
+
+import Character.type.Gender;
+import Character.type.House;
+
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
@@ -95,6 +100,6 @@ public class Noble extends Character {
         return getName() + " of " +
                 "house " + getHousesAsString(houses) +
                 " has " + getWealth() +
-                " gold dragons" + getWeapons();
+                " wealth in copper";
     }
 }
