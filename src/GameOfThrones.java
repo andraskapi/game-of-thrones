@@ -22,12 +22,17 @@ public class GameOfThrones {
 
 
 
-        System.out.println(arya);
-        System.out.println(arya.getWeapons().toString());
-        arya.removeWeapon("Stolen bow");
-        System.out.println(arya);
-        System.out.println(arya.getWeapons());
-        arya.addCoins("gold",1530);
+//        System.out.println(arya);
+//        System.out.println(arya.getWeapons().toString());
+//        arya.removeWeapon("Stolen bow");
+//        System.out.println(arya);
+//        System.out.println(arya.getWeapons());
+        arya.addCoins("gold",1);
+        arya.addCoins("silver",1);
+        arya.addCoins("silver",2);
+        arya.addCoins("copper",3);
+
+
         System.out.println(arya);
 
 

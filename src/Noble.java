@@ -32,7 +32,12 @@ public class Noble extends Character {
 
     @Override
     public void addCoins(String coinType, int amount) {
-        coins.put(coinType, amount);
+        if (coins.containsKey(coinType)) {
+            int currentAmount = coins.get(coinType);
+            coins.put(coinType, currentAmount + amount);
+        } else {
+            coins.put(coinType, amount);
+        }
     }
 
     @Override
@@ -47,13 +52,22 @@ public class Noble extends Character {
             }
         }
     }
-    public void getWealth(Map<String, Integer> coin){
-        //1 gold -> 10 silver -> 100 copper
-        int gold;
-        int silver;
-        int copper;
-        if (coins.get(
-                coin.
+
+    public int getWealth() {
+        int totalWealth = 0;
+
+        for (Map.Entry<String, Integer> entry : coins.entrySet()) {
+            String coinType = entry.getKey();
+            int amount = entry.getValue();
+            switch (coinType) {
+                case "gold" -> totalWealth += amount * 100;
+                case "silver" -> totalWealth += amount * 10;
+                case "copper" -> totalWealth += amount;
+            }
+        }
+
+
+        return totalWealth;
 
 
     }
@@ -80,7 +94,7 @@ public class Noble extends Character {
     public String toString() {
         return getName() + " of " +
                 "house " + getHousesAsString(houses) +
-                " has " + coins +
+                " has " + getWealth() +
                 " gold dragons" + getWeapons();
     }
 }
